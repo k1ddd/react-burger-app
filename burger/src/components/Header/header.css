@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  background-color: #1c1f2f;
+  text-align: center;
+  align-items: center;
+}
+
+.title {
+  color: whitesmoke;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  color: whitesmoke;
+  
+}
