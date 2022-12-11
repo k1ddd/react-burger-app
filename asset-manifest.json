@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/react-burger-app/static/css/main.a8ea5516.css",
+    "main.js": "/react-burger-app/static/js/main.3b09e754.js",
+    "static/media/lettuce.png": "/react-burger-app/static/media/lettuce.60ed2906ab0cd689912b.png",
+    "static/media/meat.png": "/react-burger-app/static/media/meat.1a8aa36baa9e6260ab77.png",
+    "static/media/bacon.png": "/react-burger-app/static/media/bacon.e6a1356d8ffb17259cc8.png",
+    "static/media/cheese.png": "/react-burger-app/static/media/cheese.1b5c6d241e5cd4d94d79.png",
+    "static/media/pickles.png": "/react-burger-app/static/media/pickles.831ef382cda5e5130b52.png",
+    "static/media/burgerLogo.svg": "/react-burger-app/static/media/burgerLogo.53a6abb92fa0c52d611c6997223ff611.svg",
+    "index.html": "/react-burger-app/index.html",
+    "main.a8ea5516.css.map": "/react-burger-app/static/css/main.a8ea5516.css.map",
+    "main.3b09e754.js.map": "/react-burger-app/static/js/main.3b09e754.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a8ea5516.css",
+    "static/js/main.3b09e754.js"
+  ]
+}
