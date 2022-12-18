@@ -33,9 +33,9 @@
 /* Main Content */
 
 .main__content {
-  background: rgba(63, 88, 201, 0.096);
+  /* background: rgba(63, 88, 201, 0.096); */
   max-height: 640px;
-  max-width: 50%;
+  /* max-width: 50%; */
   border-radius: 20px;
 }
 
@@ -64,7 +64,8 @@
 
 /*  Button */
 
-.button {
+.button,
+.btn__clear {
   margin-top: 10px;
   align-items: center;
   appearance: none;
@@ -117,6 +118,32 @@
   align-items: end;
 }
 
+.clear {
+  display: flex;
+  margin-top: 30px;
+}
+.btn__clear {
+  background-color: #1c1f2f;
+  color: #fcfcfd;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #1c1f2f 0 -3px 0 inset;
+}
+.btn__clear:focus {
+  box-shadow: #1c1f2f 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #1c1f2f 0 -3px 0 inset;
+}
+
+.btn__clear:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #1c1f2f 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.btn__clear:active {
+  box-shadow: #1c1f2f 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
 /* Ingridients */
 .ingredients {
   width: 35px;
@@ -124,10 +151,10 @@
   margin-left: 10px;
 }
 
-.bacon {
+.onion {
   margin: 5px auto;
-  height: 8px;
-  max-width: 600px;
+  height: 7px;
+  max-width: 510px;
   background-color: rgb(238, 114, 61);
 }
 
@@ -143,6 +170,13 @@
   height: 12px;
   max-width: 400px;
   background-color: rgb(171, 43, 11);
+}
+
+.tomato {
+  margin: 4px auto;
+  height: 10px;
+  max-width: 300px;
+  background-color: red;
 }
 
 .salad {
@@ -163,4 +197,30 @@
 .amount {
   margin-right: 10px;
   margin-left: 10px;
+}
+
+/* Loading */
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #1c1f2f transparent #1c1f2f transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -1,8 +1,10 @@
-import bacon from "../../../assets/bacon.png";
+import onion from "../../../assets/onion.png";
 import cheese from "../../../assets/cheese.png";
+import tomato from "../../../assets/tomato.png";
 import lettuce from "../../../assets/lettuce.png";
 import meat from "../../../assets/meat.png";
 import pickles from "../../../assets/pickles.png";
+
 const RighAside = ({ setIngidients, ingidients }) => {
   const addIngridient = (e) => {
     setIngidients({
@@ -24,14 +26,24 @@ const RighAside = ({ setIngidients, ingidients }) => {
     <div className="right__aside">
       <div>
         <div className="btn__choice">
-          <button name="bacon" onClick={addIngridient} className="button">
+          <button name="onion" onClick={addIngridient} className="button">
             +
           </button>
-          <span className="amount"> {ingidients.bacon}</span>
-          <button name="bacon" onClick={removeIngridient} className="button">
+          <span className="amount"> {ingidients.onion}</span>
+          <button name="onion" onClick={removeIngridient} className="button">
             -
           </button>
-          <img src={bacon} className="ingredients" alt="Logo" />
+          <img src={onion} className="ingredients" alt="Logo" />
+        </div>
+        <div className="btn__choice">
+          <button name="tomato" onClick={addIngridient} className="button">
+            +
+          </button>
+          <span className="amount"> {ingidients.tomato}</span>
+          <button name="tomato" onClick={removeIngridient} className="button">
+            -
+          </button>
+          <img src={tomato} className="ingredients" alt="Logo" />
         </div>
 
         <div className="btn__choice">
@@ -76,6 +88,9 @@ const RighAside = ({ setIngidients, ingidients }) => {
             -
           </button>
           <img src={meat} className="ingredients" alt="Logo" />
+        </div>
+        <div className="clear">
+          <button className="button btn__clear">Clear All</button>
         </div>
       </div>
     </div>
