@@ -1,5 +1,6 @@
 export const initialIngridients = {
-  bacon: 0,
+  onion: 0,
+  tomato: 0,
   cheese: 0,
   salad: 0,
   meat: 0,
@@ -8,21 +9,49 @@ export const initialIngridients = {
 };
 
 export function reducerIngridients(state, action) {
+  if (action.type === "clear") {
+    return {
+      onion: 0,
+      tomato: 0,
+      cheese: 0,
+      salad: 0,
+      meat: 0,
+      pickles: 0,
+      arrayIngr: [],
+    };
+  }
   switch (action.name) {
-    case "bacon":
-      if (action.type === "add" && state.bacon < 5) {
+    case "onion":
+      if (action.type === "add" && state.onion < 5) {
         return {
           ...state,
-          bacon: state.bacon + action.payload,
+          onion: state.onion + action.payload,
           arrayIngr: [...state.arrayIngr, action.name],
         };
-      } else if (action.type === "remove" && state.bacon > 0) {
+      } else if (action.type === "remove" && state.onion > 0) {
         const index = state.arrayIngr.lastIndexOf(action.name);
 
         state.arrayIngr.splice(index, 1);
         return {
           ...state,
-          bacon: state.bacon + action.payload,
+          onion: state.onion + action.payload,
+        };
+      }
+      return state;
+    case "tomato":
+      if (action.type === "add" && state.tomato < 5) {
+        return {
+          ...state,
+          tomato: state.tomato + action.payload,
+          arrayIngr: [...state.arrayIngr, action.name],
+        };
+      } else if (action.type === "remove" && state.tomato > 0) {
+        const index = state.arrayIngr.lastIndexOf(action.name);
+
+        state.arrayIngr.splice(index, 1);
+        return {
+          ...state,
+          tomato: state.tomato + action.payload,
         };
       }
       return state;

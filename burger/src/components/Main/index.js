@@ -3,10 +3,12 @@ import MainContent from "./MainContent/index";
 import RighAside from "./RighAside/index";
 import "./main.css";
 import { useReducer } from "react";
+
 import {
   reducerIngridients,
   initialIngridients,
 } from "./Ingridients/reducerIngridients";
+
 const Main = () => {
   const [ingidients, setIngidients] = useReducer(
     reducerIngridients,
@@ -14,11 +16,12 @@ const Main = () => {
   );
 
   const priceIngridients = {
-    baconSum: ingidients.bacon * 0.75,
-    cheeseSum: ingidients.cheese * 1.7,
-    saladSum: ingidients.salad * 0.95,
-    meatSum: ingidients.meat * 1.25,
-    picklesSum: ingidients.pickles * 2,
+    onionSum: ingidients.onion * 0.45,
+    tomatoSum: ingidients.tomato * 0.95,
+    cheeseSum: ingidients.cheese * 1.2,
+    saladSum: ingidients.salad * 0.45,
+    meatSum: ingidients.meat * 1.75,
+    picklesSum: ingidients.pickles * 0.85,
   };
 
   const priceBurger =
