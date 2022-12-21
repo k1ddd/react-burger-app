@@ -33,9 +33,9 @@
 /* Main Content */
 
 .main__content {
-  /* background: rgba(63, 88, 201, 0.096); */
+  background: rgba(63, 88, 201, 0.096);
   max-height: 640px;
-  /* max-width: 50%; */
+
   border-radius: 20px;
 }
 
@@ -65,7 +65,8 @@
 /*  Button */
 
 .button,
-.btn__clear {
+.btn__clear,
+a {
   margin-top: 10px;
   align-items: center;
   appearance: none;
@@ -96,18 +97,21 @@
   font-weight: 700;
 }
 
-.button:focus {
+.button:focus,
+a:focus {
   box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
 }
 
-.button:hover {
+.button:hover,
+a:hover {
   box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
   transform: translateY(-2px);
 }
 
-.button:active {
+.button:active,
+a:active {
   box-shadow: #d6d6e7 0 3px 7px inset;
   transform: translateY(2px);
 }
@@ -125,6 +129,7 @@
 .btn__clear {
   background-color: #1c1f2f;
   color: #fcfcfd;
+  height: 38px;
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #1c1f2f 0 -3px 0 inset;
 }
@@ -144,8 +149,22 @@
   transform: translateY(2px);
 }
 
+.btn {
+  height: 40px;
+}
+
+a {
+  padding: 10px;
+}
+
 /* Ingridients */
 .ingredients {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+.burger {
   width: 35px;
   height: 35px;
   margin-left: 10px;
@@ -197,6 +216,7 @@
 .amount {
   margin-right: 10px;
   margin-left: 10px;
+  text-align: center;
 }
 
 /* Loading */
@@ -223,4 +243,8 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+.right-spinner {
+  margin-top: 240px;
 }

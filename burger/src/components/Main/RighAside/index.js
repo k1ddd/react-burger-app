@@ -4,9 +4,13 @@ import tomato from "../../../assets/tomato.png";
 import lettuce from "../../../assets/lettuce.png";
 import meat from "../../../assets/meat.png";
 import pickles from "../../../assets/pickles.png";
+import del from "../../../assets/delete.png";
 
-const RighAside = ({ setIngidients, ingidients }) => {
+const RighAside = ({ setIngidients, ingidients, noMoreTen }) => {
   const addIngridient = (e) => {
+    if (noMoreTen === 10) {
+      return;
+    }
     setIngidients({
       type: "add",
       name: e.target.name,
@@ -22,9 +26,16 @@ const RighAside = ({ setIngidients, ingidients }) => {
     });
   };
 
+  const clearIngridients = () => {
+    setIngidients({
+      type: "clear",
+    });
+  };
+
   return (
     <div className="right__aside">
       <div>
+        <h2> Ingridients </h2>
         <div className="btn__choice">
           <button name="onion" onClick={addIngridient} className="button">
             +
@@ -45,7 +56,6 @@ const RighAside = ({ setIngidients, ingidients }) => {
           </button>
           <img src={tomato} className="ingredients" alt="Logo" />
         </div>
-
         <div className="btn__choice">
           <button name="cheese" onClick={addIngridient} className="button">
             +
@@ -56,7 +66,6 @@ const RighAside = ({ setIngidients, ingidients }) => {
           </button>
           <img src={cheese} className="ingredients" alt="Logo" />
         </div>
-
         <div className="btn__choice">
           <button name="salad" onClick={addIngridient} className="button">
             +
@@ -67,7 +76,16 @@ const RighAside = ({ setIngidients, ingidients }) => {
           </button>
           <img src={lettuce} className="ingredients" alt="Logo" />
         </div>
-
+        <div className="btn__choice">
+          <button name="meat" onClick={addIngridient} className="button">
+            +
+          </button>
+          <span className="amount">{ingidients.meat} </span>
+          <button name="meat" onClick={removeIngridient} className="button">
+            -
+          </button>
+          <img src={meat} className="ingredients" alt="Logo" />
+        </div>
         <div className="btn__choice">
           <button name="pickles" onClick={addIngridient} className="button">
             +
@@ -79,18 +97,14 @@ const RighAside = ({ setIngidients, ingidients }) => {
           <img src={pickles} className="ingredients" alt="Logo" />
         </div>
 
-        <div className="btn__choice">
-          <button name="meat" onClick={addIngridient} className="button">
-            +
-          </button>
-          <span className="amount">{ingidients.meat} </span>
-          <button name="meat" onClick={removeIngridient} className="button">
-            -
-          </button>
-          <img src={meat} className="ingredients" alt="Logo" />
-        </div>
         <div className="clear">
-          <button className="button btn__clear">Clear All</button>
+          <button
+            className="button btn__clear"
+            onClick={() => clearIngridients()}
+          >
+            Clear All
+            <img src={del} className="burger" alt="Logo" />
+          </button>
         </div>
       </div>
     </div>
