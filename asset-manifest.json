@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/react-burger-app/static/css/main.52215de9.css",
-    "main.js": "/react-burger-app/static/js/main.f0579ae6.js",
+    "main.css": "/react-burger-app/static/css/main.57a2c138.css",
+    "main.js": "/react-burger-app/static/js/main.b309254d.js",
+    "static/media/meat.png": "/react-burger-app/static/media/meat.f6659319d8dec6a23af2.png",
     "static/media/lettuce.png": "/react-burger-app/static/media/lettuce.60ed2906ab0cd689912b.png",
     "static/media/tomato.png": "/react-burger-app/static/media/tomato.438f7db42426700d91b7.png",
-    "static/media/meat.png": "/react-burger-app/static/media/meat.1a8aa36baa9e6260ab77.png",
-    "static/media/cheese.png": "/react-burger-app/static/media/cheese.1b5c6d241e5cd4d94d79.png",
+    "static/media/onion.png": "/react-burger-app/static/media/onion.2b4372fe2771a867ba5b.png",
     "static/media/pickles.png": "/react-burger-app/static/media/pickles.831ef382cda5e5130b52.png",
-    "static/media/onion.png": "/react-burger-app/static/media/onion.d650005097522e7bb1cc.png",
+    "static/media/burger.png": "/react-burger-app/static/media/burger.0a8b891538728727c0e0.png",
+    "static/media/cheese.png": "/react-burger-app/static/media/cheese.4743b44dbe0fa038250e.png",
+    "static/media/delete.png": "/react-burger-app/static/media/delete.b5d68e25ab3f6cd47475.png",
     "static/media/burgerLogo.svg": "/react-burger-app/static/media/burgerLogo.53a6abb92fa0c52d611c6997223ff611.svg",
     "index.html": "/react-burger-app/index.html",
-    "main.52215de9.css.map": "/react-burger-app/static/css/main.52215de9.css.map",
-    "main.f0579ae6.js.map": "/react-burger-app/static/js/main.f0579ae6.js.map"
+    "main.57a2c138.css.map": "/react-burger-app/static/css/main.57a2c138.css.map",
+    "main.b309254d.js.map": "/react-burger-app/static/js/main.b309254d.js.map"
   },
   "entrypoints": [
-    "static/css/main.52215de9.css",
-    "static/js/main.f0579ae6.js"
+    "static/css/main.57a2c138.css",
+    "static/js/main.b309254d.js"
   ]
 }
