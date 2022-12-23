@@ -9,9 +9,7 @@ const LeftAside = () => {
       axios
         .get("https://burger-api-xcwp.onrender.com/ingredients")
         .then((r) => setData(r.data));
-    } catch (error) {
-      console.log(error);
-    }
+    } catch(error) {}
   }, []);
 
   return (
@@ -22,7 +20,7 @@ const LeftAside = () => {
         {data ? (
           data.map((e) => <p key={e._id}>{`${e.name}: ${e.price} UAH`}</p>)
         ) : (
-          <div class="lds-dual-ring"></div>
+          <div className="lds-dual-ring"></div>
         )}
       </div>
     </div>

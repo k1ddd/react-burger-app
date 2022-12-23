@@ -2,7 +2,7 @@ import LeftAside from "./LeftAside/index";
 import MainContent from "./MainContent/index";
 import RighAside from "./RighAside/index";
 import "./main.css";
-import { useReducer } from "react";
+import { useReducer, useState, useEffect } from "react";
 
 import {
   reducerIngridients,
@@ -29,11 +29,34 @@ const Main = () => {
       Object.values(priceIngridients).reduce((a, c) => a + c, 1) * 100
     ) / 100;
 
+  const [Load, setLoad] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoad(false);
+    }, 500);
+  }, []);
+
+  let noMoreTen = 0;
+
+  for (const key in ingidients) {
+    if (typeof ingidients[key] === "number") {
+      noMoreTen += ingidients[key];
+    }
+  }
+
   return (
     <div className="main">
       <LeftAside />
       <MainContent ingidients={ingidients} priceBurger={priceBurger} />
-      <RighAside ingidients={ingidients} setIngidients={setIngidients} />
+      {Load ? (
+        <div className="lds-dual-ring right-spinner"></div>
+      ) : (
+        <RighAside
+          ingidients={ingidients}
+          setIngidients={setIngidients}
+          noMoreTen={noMoreTen}
+        />
+      )}
     </div>
   );
 };
