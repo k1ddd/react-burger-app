@@ -2,8 +2,13 @@ import { useState, useEffect } from "react";
 import Ingridients from "../Ingridients/Ingridients";
 import burger from "../../../assets/burger.png";
 
-const MainContent = ({ ingidients, priceBurger }) => {
+const MainContent = ({ ingidients, priceBurger, setModal, setModalIngr }) => {
   const [load, setLoad] = useState(false);
+
+  const handleClick = () => {
+    setModalIngr({ ...ingidients });
+    setModal(true);
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -26,7 +31,7 @@ const MainContent = ({ ingidients, priceBurger }) => {
         {load ? (
           <div className="lds-dual-ring"></div>
         ) : (
-          <button onClick={() => setLoad(true)} className="button btn">
+          <button onClick={handleClick} className="button btn">
             Order
             <img src={burger} className="burger" alt="Logo" />
           </button>

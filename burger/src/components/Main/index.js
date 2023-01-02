@@ -9,7 +9,7 @@ import {
   initialIngridients,
 } from "./Ingridients/reducerIngridients";
 
-const Main = () => {
+const Main = ({ setModal, setModalIngr, setBurgerPrice }) => {
   const [ingidients, setIngidients] = useReducer(
     reducerIngridients,
     initialIngridients
@@ -29,6 +29,10 @@ const Main = () => {
       Object.values(priceIngridients).reduce((a, c) => a + c, 1) * 100
     ) / 100;
 
+  useEffect(() => {
+    setBurgerPrice(priceBurger);
+  });
+
   const [Load, setLoad] = useState(true);
   useEffect(() => {
     setTimeout(() => {
@@ -47,7 +51,12 @@ const Main = () => {
   return (
     <div className="main">
       <LeftAside />
-      <MainContent ingidients={ingidients} priceBurger={priceBurger} />
+      <MainContent
+        setModal={setModal}
+        ingidients={ingidients}
+        priceBurger={priceBurger}
+        setModalIngr={setModalIngr}
+      />
       {Load ? (
         <div className="lds-dual-ring right-spinner"></div>
       ) : (
