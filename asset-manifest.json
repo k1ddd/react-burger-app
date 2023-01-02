@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-burger-app/static/css/main.0416c062.css",
-    "main.js": "/react-burger-app/static/js/main.b8b861af.js",
+    "main.css": "/react-burger-app/static/css/main.6e8ccaf4.css",
+    "main.js": "/react-burger-app/static/js/main.3695ae95.js",
     "static/media/meat.png": "/react-burger-app/static/media/meat.f6659319d8dec6a23af2.png",
     "static/media/lettuce.png": "/react-burger-app/static/media/lettuce.60ed2906ab0cd689912b.png",
     "static/media/tomato.png": "/react-burger-app/static/media/tomato.438f7db42426700d91b7.png",
@@ -12,11 +12,11 @@
     "static/media/delete.png": "/react-burger-app/static/media/delete.b5d68e25ab3f6cd47475.png",
     "static/media/burgerLogo.svg": "/react-burger-app/static/media/burgerLogo.53a6abb92fa0c52d611c6997223ff611.svg",
     "index.html": "/react-burger-app/index.html",
-    "main.0416c062.css.map": "/react-burger-app/static/css/main.0416c062.css.map",
-    "main.b8b861af.js.map": "/react-burger-app/static/js/main.b8b861af.js.map"
+    "main.6e8ccaf4.css.map": "/react-burger-app/static/css/main.6e8ccaf4.css.map",
+    "main.3695ae95.js.map": "/react-burger-app/static/js/main.3695ae95.js.map"
   },
   "entrypoints": [
-    "static/css/main.0416c062.css",
-    "static/js/main.b8b861af.js"
+    "static/css/main.6e8ccaf4.css",
+    "static/js/main.3695ae95.js"
   ]
 }
