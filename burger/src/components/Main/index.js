@@ -2,7 +2,7 @@ import LeftAside from "./LeftAside/index";
 import MainContent from "./MainContent/index";
 import RighAside from "./RighAside/index";
 import "./main.css";
-import { useReducer, useState, useEffect } from "react";
+import { useReducer, useEffect } from "react";
 
 import {
   reducerIngridients,
@@ -33,13 +33,6 @@ const Main = ({ setModal, setModalIngr, setBurgerPrice }) => {
     setBurgerPrice(priceBurger);
   });
 
-  const [Load, setLoad] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      setLoad(false);
-    }, 500);
-  }, []);
-
   let noMoreTen = 0;
 
   for (const key in ingidients) {
@@ -57,15 +50,11 @@ const Main = ({ setModal, setModalIngr, setBurgerPrice }) => {
         priceBurger={priceBurger}
         setModalIngr={setModalIngr}
       />
-      {Load ? (
-        <div className="lds-dual-ring right-spinner"></div>
-      ) : (
-        <RighAside
-          ingidients={ingidients}
-          setIngidients={setIngidients}
-          noMoreTen={noMoreTen}
-        />
-      )}
+      <RighAside
+        ingidients={ingidients}
+        setIngidients={setIngidients}
+        noMoreTen={noMoreTen}
+      />
     </div>
   );
 };
